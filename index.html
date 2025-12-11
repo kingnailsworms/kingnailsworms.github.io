@@ -1,10 +1,365 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>King Nails Worms – Nails & Lashes</title>
+  <meta name="description" content="King Nails Worms in der Kaiserpassage Worms. Nageldesign, Wimpernverlängerung und MSE Farbgele." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f7;
+      color: #111827;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #ffffff;
+      min-height: 100vh;
+      box-shadow: 0 0 30px rgba(0,0,0,0.08);
+    }
+
+    /* TOPBAR + NAV */
+    header {
+      position: relative;
+    }
+    .hero {
+      position: relative;
+      height: 260px;
+      background-image: linear-gradient(90deg, #f9fafb 0%, #d1d5db 40%, #f9fafb 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    /* Anh thay link này bằng ảnh tiệm sau:
+       background-image: url('LINK-ANH-TIEM.jpg'); */
+    .hero::before {
+      content: " ";
+      position: absolute;
+      inset: 0;
+      background: url("https://via.placeholder.com/1600x450?text=King+Nails+Worms") center/cover no-repeat;
+      opacity: 0.7;
+    }
+    .hero-overlay {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #111827;
+    }
+
+    .topbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(0,0,0,0.55);
+      color: #ffffff;
+    }
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      background: #111827;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #facc15;
+      font-weight: bold;
+      font-size: 10px;
+      text-align: center;
+      line-height: 1.1;
+    }
+    .brand-title {
+      font-weight: 600;
+      font-size: 16px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+      font-size: 15px;
+    }
+    nav a {
+      color: #ffffff;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .info-box {
+      position: absolute;
+      right: 32px;
+      bottom: 24px;
+      max-width: 360px;
+      background: rgba(255,255,255,0.96);
+      border-radius: 6px;
+      padding: 12px 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .info-box p + p { margin-top: 4px; }
+    .info-label { font-weight: 600; }
+
+    .hero-title {
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .hero-sub {
+      font-size: 15px;
+    }
+
+    /* CONTENT SECTIONS */
+    main {
+      padding: 32px 40px 40px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 24px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .service-card {
+      background: #f9fafb;
+      border-radius: 10px;
+      padding: 16px;
+      border: 1px solid #e5e7eb;
+    }
+    .service-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .service-text {
+      font-size: 14px;
+      color: #4b5563;
+      line-height: 1.5;
+    }
+
+    .gels-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .gel-card {
+      text-align: center;
+      font-size: 14px;
+    }
+    .gel-image {
+      width: 100%;
+      max-width: 220px;
+      margin: 0 auto 8px;
+      border-radius: 6px;
+      background: #e5e7eb;
+      padding: 10px;
+    }
+    .gel-image img {
+      width: 100%;
+      display: block;
+    }
+    .gel-code {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .gel-text {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .kontakt-box {
+      background: #f9fafb;
+      border-radius: 10px;
+      padding: 16px 18px;
+      border: 1px solid #e5e7eb;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .kontakt-box p + p { margin-top: 6px; }
+    .kontakt-box a {
+      color: #2563eb;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #6b7280;
+      padding: 16px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    @media (max-width: 900px) {
+      main { padding: 24px 16px 32px; }
+      .services-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+      .gels-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .info-box {
+        position: static;
+        margin: 12px 16px 0;
+      }
+      .hero {
+        height: auto;
+        padding-top: 70px;
+        padding-bottom: 18px;
+      }
+      .topbar {
+        position: static;
+        background: #111827;
+      }
+      nav ul {
+        gap: 14px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
 <body>
+  <div class="page">
+    <header>
+      <div class="hero">
+        <div class="hero-overlay">
+          <div class="hero-title">King Nails Worms</div>
+          <div class="hero-sub">Nails & Lashes im Herzen von Worms – Kaiserpassage neben H&amp;M</div>
+        </div>
 
-<h1>Kingnails Worms</h1>
-<p>My first paragraph.</p>
+        <div class="topbar">
+          <div class="logo-wrap">
+            <div class="logo">KING<br>NAILS</div>
+            <div class="brand-title">King Nails Worms – Nails &amp; Lashes</div>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#gels">Farbgele</a></li>
+              <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
 
+        <div class="info-box">
+          <p><span class="info-label">Adresse:</span> Am Römischen Kaiser 9, Kaiser Passage (1. OG neben H&amp;M)</p>
+          <p><span class="info-label">Telefon / WhatsApp:</span> <a href="tel:+491638022711">+49 163 8022711</a></p>
+          <p><span class="info-label">Instagram:</span> <a href="https://www.instagram.com/kingnails_worms" target="_blank">@kingnails_worms</a></p>
+          <p><span class="info-label">Facebook:</span> King Nails Worms</p>
+          <p><span class="info-label">TikTok:</span> @kingnails.worms</p>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <!-- LEISTUNGEN -->
+      <section>
+        <h2 class="section-title">Unsere Leistungen</h2>
+        <p class="section-sub">
+          Moderne Nageldesigns, natürliche Wimpernverlängerung und hochwertige MSE Farbgele – alles an einem Ort.
+        </p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-title">Nageldesign</div>
+            <p class="service-text">
+              Neumodellage, Auffüllen, French, Babyboomer, Full Color und mehr. Wir arbeiten präzise und hygienisch.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-title">Wimpernverlängerung</div>
+            <p class="service-text">
+              1:1 Technik, Volumen und Mega-Volumen. Individuelle Beratung für einen Look, der zu Ihrem Gesicht passt.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-title">MSE Farbgele</div>
+            <p class="service-text">
+              Große Auswahl an Premium-Farbgelen von MSE. Über 1.100 Farben möglich, von natürlich bis extra auffällig.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FARBEGELE -->
+      <section id="gels">
+        <h2 class="section-title">Beispiele unserer MSE Farbgele</h2>
+        <p class="section-sub">
+          Hier sehen Sie nur einige wenige Farben. Im Studio zeigen wir Ihnen die komplette Farbpalette.
+        </p>
+        <div class="gels-row">
+          <div class="gel-card">
+            <div class="gel-image">
+              <img src="https://via.placeholder.com/220x140?text=MSE+082" alt="MSE Gel 082 Black" />
+            </div>
+            <div class="gel-code">082 – Premium PURE Black</div>
+            <div class="gel-text">Intensives Schwarz, perfekt für feine Linien und Full Cover.</div>
+          </div>
+          <div class="gel-card">
+            <div class="gel-image">
+              <img src="https://via.placeholder.com/220x140?text=MSE+980" alt="MSE Gel 980 White" />
+            </div>
+            <div class="gel-code">980 – PURE White</div>
+            <div class="gel-text">Klares Weiß für French, Babyboomer und Design.</div>
+          </div>
+          <div class="gel-card">
+            <div class="gel-image">
+              <img src="https://via.placeholder.com/220x140?text=MSE+365" alt="MSE Gel 365 Rot" />
+            </div>
+            <div class="gel-code">365 – Intense Classic Cherry Red</div>
+            <div class="gel-text">Klassisches Rot, sehr beliebt für elegante Looks.</div>
+          </div>
+          <div class="gel-card">
+            <div class="gel-image">
+              <img src="https://via.placeholder.com/220x140?text=MSE+075" alt="MSE Gel 075 Rot" />
+            </div>
+            <div class="gel-code">075 – Klassisches Dunkelrot</div>
+            <div class="gel-text">Tiefes Dunkelrot, ideal für den Abend oder besondere Anlässe.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KONTAKT -->
+      <section id="kontakt">
+        <h2 class="section-title">Kontakt und Öffnungszeiten</h2>
+        <div class="kontakt-box">
+          <p><strong>Adresse:</strong> Am Römischen Kaiser 9, Kaiser Passage, 67457 Worms</p>
+          <p><strong>Telefon / WhatsApp:</strong> <a href="tel:+491638022711">+49 163 8022711</a></p>
+          <p><strong>Instagram:</strong> <a href="https://www.instagram.com/kingnails_worms" target="_blank">@kingnails_worms</a></p>
+          <p><strong>Öffnungszeiten (Beispiel):</strong><br>
+             Mo - Sa: 10:00 - 19:00 Uhr<br>
+             Sonntag: geschlossen
+          </p>
+          <p>
+            Für Termine schreiben Sie uns gerne per WhatsApp oder Instagram.  
+            Laufkundschaft ist je nach Auslastung ebenfalls möglich.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2025 King Nails Worms. Alle Rechte vorbehalten.
+    </footer>
+  </div>
 </body>
 </html>
