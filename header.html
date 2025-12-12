@@ -1,3 +1,164 @@
-<div style="padding:20px; background:#eee;">
-  Đây là header
-</div>
+<!-- header.html -->
+<style>
+  :root{
+    --kn-bg: #111827;         /* slate-900 */
+    --kn-bg-2: #0b1220;       /* deeper */
+    --kn-text: #f9fafb;       /* near white */
+    --kn-muted: #cbd5e1;      /* slate-300 */
+    --kn-gold: #f5c542;
+    --kn-card: rgba(255,255,255,0.06);
+    --kn-border: rgba(255,255,255,0.10);
+  }
+
+  .kn-header{
+    background: radial-gradient(1200px 500px at 20% 0%, rgba(245,197,66,0.10) 0%, rgba(17,24,39,0) 45%),
+                linear-gradient(180deg, var(--kn-bg) 0%, var(--kn-bg-2) 100%);
+    color: var(--kn-text);
+    padding: 18px 18px 16px;
+  }
+
+  .kn-top{
+    display: grid;
+    grid-template-columns: 78px 1fr;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .kn-logo{
+    width: 78px;
+    height: 78px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
+    border: 1px solid var(--kn-border);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+
+  .kn-logo-inner{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 1.05;
+    color: var(--kn-gold);
+    font-size: 18px;
+  }
+
+  .kn-title{
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.12;
+    margin: 0;
+  }
+
+  .kn-nav{
+    display: flex;
+    gap: 28px;
+    padding: 10px 4px 6px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .kn-nav a{
+    color: var(--kn-text);
+    text-decoration: none;
+    opacity: 0.95;
+  }
+  .kn-nav a:active{ opacity: 0.75; }
+
+  .kn-info{
+    background: var(--kn-card);
+    border: 1px solid var(--kn-border);
+    border-radius: 14px;
+    padding: 14px 14px;
+  }
+
+  .kn-row{
+    margin: 8px 0;
+    font-size: 20px;
+    line-height: 1.28;
+    color: var(--kn-text);
+    word-break: break-word;
+  }
+  .kn-label{
+    font-weight: 800;
+    color: var(--kn-text);
+    margin-right: 6px;
+  }
+  .kn-value{
+    color: var(--kn-muted);
+    font-weight: 500;
+  }
+
+  .kn-info a{
+    color: var(--kn-muted);
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(203,213,225,0.55);
+  }
+
+  /* Small phones */
+  @media (max-width: 360px){
+    .kn-title{ font-size: 24px; }
+    .kn-nav{ font-size: 20px; gap: 20px; }
+    .kn-row{ font-size: 18px; }
+  }
+
+  /* Larger screens later (optional) */
+  @media (min-width: 900px){
+    .kn-header{ padding: 22px 28px; }
+    .kn-title{ font-size: 34px; }
+    .kn-nav{ font-size: 20px; }
+    .kn-row{ font-size: 18px; }
+  }
+</style>
+
+<header class="kn-header" id="top">
+  <div class="kn-top">
+    <!-- Logo placeholder: sau này anh thay bằng <img> nếu muốn -->
+    <div class="kn-logo" aria-label="King Nails Logo">
+      <div class="kn-logo-inner">
+        KING<br/>NAILS
+      </div>
+    </div>
+
+    <h1 class="kn-title">King Nails Worms –<br/>Nails &amp; Lashes</h1>
+  </div>
+
+  <nav class="kn-nav" aria-label="Hauptnavigation">
+    <a href="#home">Home</a>
+    <a href="#farbgele">Farbgele</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+
+  <div class="kn-info">
+    <div class="kn-row">
+      <span class="kn-label">Adresse:</span>
+      <span class="kn-value">Am Römischen Kaiser 9, Kaiser Passage (1. OG neben H&amp;M)</span>
+    </div>
+
+    <div class="kn-row">
+      <span class="kn-label">Telefon / WhatsApp:</span>
+      <span class="kn-value"><a href="tel:+491638022711">+49 163 8022711</a></span>
+    </div>
+
+    <div class="kn-row">
+      <span class="kn-label">Instagram:</span>
+      <span class="kn-value"><a href="https://www.instagram.com/kingnails_worms" target="_blank" rel="noopener">@kingnails_worms</a></span>
+    </div>
+
+    <div class="kn-row">
+      <span class="kn-label">Facebook:</span>
+      <span class="kn-value">King Nails Worms</span>
+    </div>
+
+    <div class="kn-row">
+      <span class="kn-label">TikTok:</span>
+      <span class="kn-value">@kingnails.worms</span>
+    </div>
+  </div>
+</header>
