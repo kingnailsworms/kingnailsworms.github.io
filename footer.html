@@ -1,3 +1,95 @@
-<div style="padding:20px; background:#eee;">
-  Đây là footer
-</div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h2>ADDRESS</h2>
+      <p>KING NAILS WORMS</p>
+      <p>AM RÖMISCHEN KAISER 9</p>
+      <p>KAISER PASSAGE</p>
+      <p>1. OG NEBEN H&amp;M</p>
+      <p>67547 WORMS</p>
+      <p>DEUTSCHLAND</p>
+    </div>
+
+    <div class="footer-section">
+      <h2>OPENING HOURS</h2>
+      <p>MONDAY 09:00 - 19:00</p>
+      <p>TUESDAY 09:00 - 19:00</p>
+      <p>WEDNESDAY 09:00 - 19:00</p>
+      <p>THURSDAY 09:00 - 19:00</p>
+      <p>FRIDAY 09:00 - 19:00</p>
+      <p>SATURDAY 09:00 - 18:00</p>
+      <p>SUNDAY CLOSED</p>
+    </div>
+
+    <div class="footer-section">
+      <h2>GET IN TOUCH</h2>
+      <p><a href="https://www.facebook.com/" target="_blank">Facebook: King Nails Worms</a></p>
+      <p><a href="https://www.instagram.com/kingnails.worms/" target="_blank">Instagram: @kingnails.worms</a></p>
+      <p><a href="https://www.tiktok.com/" target="_blank">TikTok: @kingnails.worms</a></p>
+      <p><a href="tel:+491638022711">Phone: +49 163 8022711</a></p>
+      <p><a href="https://wa.me/491638022711" target="_blank">WhatsApp: +49 163 8022711</a></p>
+      <p><a href="https://www.google.com/search?q=King+Nails+Worms" target="_blank">Google Review: King Nails Worms</a></p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: #000;
+    color: #b3b3b3;
+    padding: 60px 24px;
+    font-family: Arial, sans-serif;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 60px;
+  }
+
+  .footer-section h2 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+  }
+
+  .footer-section p {
+    margin: 0 0 16px;
+    font-size: 18px;
+    line-height: 1.7;
+    letter-spacing: 1px;
+  }
+
+  .footer-section a {
+    color: #b3b3b3;
+    text-decoration: none;
+  }
+
+  .footer-section a:hover {
+    color: #ffffff;
+  }
+
+  @media (max-width: 768px) {
+    .site-footer {
+      padding: 40px 20px;
+    }
+
+    .footer-section h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .footer-section p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .footer-container {
+      gap: 40px;
+    }
+  }
+</style>
