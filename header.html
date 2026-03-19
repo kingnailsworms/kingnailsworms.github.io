@@ -1,14 +1,25 @@
 <header class="site-header">
-  <div class="header-container">
+  <div class="header-top">
     <h1 class="logo">KING NAILS</h1>
+  </div>
+
+  <div class="header-hero">
+    <h2>WELCOME TO</h2>
+    <h2>KING NAILS</h2>
+    <div class="line"></div>
   </div>
 </header>
 
 <style>
   .site-header {
     background: #f5ede6;
-    padding: 60px 20px 40px;
     text-align: center;
+    font-family: "Times New Roman", serif;
+  }
+
+  /* LOGO TRÊN */
+  .header-top {
+    padding: 50px 20px 20px;
   }
 
   .logo {
@@ -17,17 +28,43 @@
     font-weight: 300;
     color: #d88c9a;
     margin: 0;
-    font-family: "Times New Roman", serif;
   }
 
+  /* HERO PHÍA DƯỚI */
+  .header-hero {
+    background: #e8cfcf;
+    padding: 80px 20px;
+  }
+
+  .header-hero h2 {
+    font-size: 42px;
+    letter-spacing: 8px;
+    font-weight: 300;
+    color: #c77c86;
+    margin: 10px 0;
+  }
+
+  .line {
+    width: 80px;
+    height: 2px;
+    background: #c77c86;
+    margin: 30px auto 0;
+  }
+
+  /* MOBILE */
   @media (max-width: 768px) {
     .logo {
       font-size: 32px;
       letter-spacing: 6px;
     }
 
-    .site-header {
-      padding: 40px 10px 30px;
+    .header-hero h2 {
+      font-size: 26px;
+      letter-spacing: 4px;
+    }
+
+    .header-hero {
+      padding: 60px 15px;
     }
   }
 </style>
