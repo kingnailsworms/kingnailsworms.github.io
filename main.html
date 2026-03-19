@@ -1,4 +1,120 @@
-<div style="padding:20px;">
-  Đây là main
-</div>
+<main class="site-main">
+  <section class="instagram-gallery">
+    <a href="https://www.instagram.com/kingnails.worms/" target="_blank" class="gallery-item">
+      <img src="pictures/1.JPG" alt="King Nails photo 1">
+    </a>
+
+    <a href="https://www.instagram.com/kingnails.worms/" target="_blank" class="gallery-item">
+      <img src="pictures/2.JPG" alt="King Nails photo 2">
+    </a>
+
+    <a href="https://www.instagram.com/kingnails.worms/" target="_blank" class="gallery-item">
+      <img src="pictures/3.jpg" alt="King Nails photo 3">
+    </a>
+
+    <a href="https://www.instagram.com/kingnails.worms/" target="_blank" class="gallery-item">
+      <img src="pictures/4.jpg" alt="King Nails photo 4">
+    </a>
+
+    <a href="https://www.instagram.com/kingnails.worms/" target="_blank" class="gallery-item">
+      <img src="pictures/5.jpg" alt="King Nails photo 5">
+    </a>
+
+    <a href="https://www.instagram.com/kingnails.worms/" target="_blank" class="gallery-item">
+      <img src="pictures/6.jpg" alt="King Nails photo 6">
+    </a>
+
+    <a href="https://www.instagram.com/kingnails.worms/" target="_blank" class="gallery-item">
+      <img src="pictures/7.jpg" alt="King Nails photo 7">
+    </a>
+
+    <a href="https://www.instagram.com/kingnails.worms/" target="_blank" class="gallery-item">
+      <img src="pictures/8.jpg" alt="King Nails photo 8">
+    </a>
+
+    <a href="https://www.instagram.com/kingnails.worms/" target="_blank" class="gallery-item">
+      <img src="pictures/9.jpg" alt="King Nails photo 9">
+    </a>
+
+    <a href="https://www.instagram.com/kingnails.worms/" target="_blank" class="gallery-item">
+      <img src="pictures/10.jpg" alt="King Nails photo 10">
+    </a>
+  </section>
+
+  <section class="instagram-button-wrap">
+    <a href="https://www.instagram.com/kingnails.worms/" target="_blank" class="instagram-button">
+      VIEW MORE ON INSTAGRAM
+    </a>
+  </section>
+</main>
+
+<style>
+  .site-main {
+    background: #f4dede;
+    padding: 0;
+  }
+
+  .instagram-gallery {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .gallery-item {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    overflow: hidden;
+    border-bottom: 8px solid #ffffff;
+  }
+
+  .gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.02);
+    opacity: 0.95;
+  }
+
+  .instagram-button-wrap {
+    text-align: center;
+    padding: 40px 20px 60px;
+  }
+
+  .instagram-button {
+    display: inline-block;
+    background: #c98593;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 28px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    border-radius: 999px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-family: Arial, sans-serif;
+  }
+
+  .instagram-button:hover {
+    background: #b97382;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .gallery-item {
+      border-bottom: 6px solid #ffffff;
+    }
+
+    .instagram-button {
+      font-size: 13px;
+      padding: 12px 22px;
+      letter-spacing: 1.5px;
+    }
+  }
+</style>
 
